@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ex1</title>
+
+    <script>
+      function alertMe(){
+        alert('This is a javascript Alert');
+      }
+
+      function confirmMe(){
+        var choice=confirm('Do you agree?');
+        if(choice==true){
+          alert("That is wonderful!");
+        }
+        else{
+          var choice=confirm("Are you sure?")
+          if (choice==1){
+            alert("You will regret this!");
+          }
+          else{
+            alert("Good call!");
+          }
+        }
+      }
+
+      function backred(){
+        d1.className="REDbac";
+        d2.className="REDbac";
+      }
+      function backblue(){
+        d1.className="BLUEbac";
+        d2.className="BLUEbac";
+      }
+      function backclear(){
+        d1.className="CLEARbac";
+        d2.className="CLEARbac";
+      }
+      function textchange(){
+        d1.innerHTML="CHANGED ELEMENT1";
+        d2.innerHTML="CHANGED ELEMENT2";
+      }
+    </script>
+
+    <style>
+      .REDbac{
+        background-color:red;
+        color:white;
+      }
+      .BLUEbac{
+        background-color:blue;
+        color:white;
+      }
+      .CLEARbac{
+        background-color:white;
+        color:black;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Simple Alert</h1>
+    <!-- <input type="button" value="Alert Me" onclick="alert('This is an alert test!')"> -->
+    <input type="button" value="Javascript Alert" onclick="alertMe();">
+    <h1>Hostile confirmation loop!</h1>
+    <input type="button" value="Confirm" onclick="confirmMe();">
+
+
+    <h1>Changing colors interactively</h1>
+    <div id="d1">
+      <p>Element 1</p>
+    </div>
+    <div id="d2">
+      <p>Element 2</p>
+    </div>
+    <input id="button1" type="button" value="RED Background" onclick="backred();">
+    <input id="button2" type="button" value="BLUE Background" onclick="backblue();">
+    <input id="button3" type="button" value="clear Background" onclick="backclear();">
+  </body>
+    <div>
+      <br>
+      <input id="button4" type="button" value="CHANGE text" onclick="textchange();">
+    </div>
+</html>
