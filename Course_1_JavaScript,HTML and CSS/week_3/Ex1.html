@@ -24,6 +24,8 @@
           }
         }
       }
+      var store1=d1a.innerHTML;
+      var store2=d2b.innerHTML;
 
       function backred(){
         d1.className="REDbac";
@@ -38,8 +40,12 @@
         d2.className="CLEARbac";
       }
       function textchange(){
-        d1.innerHTML="CHANGED ELEMENT1";
-        d2.innerHTML="CHANGED ELEMENT2";
+        d1.innerHTML="<p>CHANGED ELEMENT1</p>";
+        d2.innerHTML="<p>CHANGED ELEMENT2</p>";
+      }
+      function cleartextchange(){
+        d1.innerHTML="<p>Element 1 </p>";
+        d2.innerHTML="<p>Element 2</p>";
       }
     </script>
 
@@ -69,17 +75,21 @@
 
     <h1>Changing colors interactively</h1>
     <div id="d1">
-      <p>Element 1</p>
+      <p id="d1a">Element 1</p>
     </div>
     <div id="d2">
-      <p>Element 2</p>
+      <p id="d2a">Element 2</p>
     </div>
+
     <input id="button1" type="button" value="RED Background" onclick="backred();">
     <input id="button2" type="button" value="BLUE Background" onclick="backblue();">
     <input id="button3" type="button" value="clear Background" onclick="backclear();">
-  </body>
+
     <div>
       <br>
       <input id="button4" type="button" value="CHANGE text" onclick="textchange();">
+      <input id="button5" type="button" value="Clear text" onclick="cleartextchange();">
     </div>
+  </body>
+
 </html>
